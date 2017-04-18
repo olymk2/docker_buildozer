@@ -1,0 +1,15 @@
+
+** Build the container with 
+#+BEGIN_SRC sh
+docker build -t buildozer .
+#+END_SRC
+
+** Run the container this way
+you need to expose your usb bus for the deploy to work, and your udev rules.
+#+BEGIN_SRC sh
+docker run  --privileged -it --entrypoint=/bin/bash \ 
+    -v /dev/bus/usb:/dev/bus/usb \ 
+    -v /etc/udev/rules.d/:/etc/udev/rules.d/ \
+    -v path/to/your/app/with/buildozer.spec:/opt/app buildozer
+#+END_SRC
+
