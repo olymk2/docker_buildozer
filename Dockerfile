@@ -84,6 +84,6 @@ WORKDIR /opt/app
 
 #ENTRYPOINT ["/bin/bash", "-c", "echo 'buildozer android debug deploy run'"]
 #ENTRYPOINT ["/bin/bash", "-c", "pwd && ls -la && buildozer android clean && buildozer android update"]
-ENTRYPOINT ["/bin/bash", "-c", "echo 'buildozer android debug deploy run'"]
+ENTRYPOINT ["/bin/bash", "-c", "buildozer android debug deploy run"]
 
 
